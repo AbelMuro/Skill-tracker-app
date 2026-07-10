@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'robotoCondensed';
+    src: url('../public/Fonts/RobotoCondensed.ttf');
+}
+
+@font-face{
+    font-family: 'manrope';
+    src: url('../public/Fonts/Manrope.ttf');
+}
+
+body{
+    margin: 0px;
+    background-color: var(--preset-color-white-2);
+}
+
+*{
+    box-sizing: border-box;
+    transition: all 0.2s linear, opacity 0s, transform 0s;
+}
+
+:root{
+    --preset-text-logo-font-family: 'robotoCondensed';
+    --preset-text-logo-font-size: 1.5rem;
+    --preset-text-logo-font-weight: 600;
+    --preset-text-logo-line-height: 2rem;
+    --preset-text-logo-letter-spacing: 0px;
+
+    --preset-text-button-font-family: 'manrope';
+    --preset-text-button-font-size: 1rem;
+    --preset-text-button-font-weight: 600;
+    --preset-text-button-line-height: 2rem;
+    --preset-text-button-letter-spacing: 0px;   
+
+    --preset-text-1-font-family: 'manrope';
+    --preset-text-1-font-size: 2.5rem;
+    --preset-text-1-font-weight: 800;
+    --preset-text-1-line-height: 2rem;
+    --preset-text-1-letter-spacing: 0px;
+
+    --preset-text-2-font-family: 'manrope';
+    --preset-text-2-font-size: 2rem;
+    --preset-text-2-font-weight: 600;
+    --preset-text-2-line-height: 2rem;
+    --preset-text-2-letter-spacing: 0px;
+
+    --preset-text-3-font-family: 'manrope';
+    --preset-text-3-font-size: 1.5rem;
+    --preset-text-3-font-weight: 500;
+    --preset-text-3-line-height: 2rem;
+    --preset-text-3-letter-spacing: 0px;
+
+
+    --preset-color-white-1: rgb(255, 255, 255);
+    --preset-color-white-2: rgb(249, 249, 249);  
+    --preset-color-white-3: rgb(223, 223, 223);
+
+    --preset-color-grey-1: rgb(223, 223, 223);
+    --preset-color-grey-2: rgb(200, 200, 200);
+    --preset-color-grey-3: rgb(177, 177, 177);
+
+    --preset-color-green-1: #089104;
+    --preset-color-green-2: #087804;
+    --preset-color-green-3: #076004;
+
+}

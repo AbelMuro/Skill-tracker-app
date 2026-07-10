@@ -1,0 +1,78 @@
+.nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    border-bottom: 1px solid var(--preset-color-white-3);
+    background-color: var(--preset-color-white-1);
+}
+
+.nav_logo{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--preset-text-logo-font-family);
+    font-size: var(--preset-text-logo-font-size);
+    font-weight: var(--preset-text-logo-font-weight);
+    line-height: var(--preset-text-logo-line-height);
+    letter-spacing: var(--preset-text-logo-letter-spacing);
+}
+
+.nav_logo > img{
+    width: 60px;
+    object-fit: contain;
+}
+
+.nav_buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.nav_session{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: var(--preset-color-green-1);
+    font-family: var(--preset-text-button-font-family);
+    font-size: var(--preset-text-button-font-size);
+    font-weight: var(--preset-text-button-font-weight);
+    line-height: var(--preset-text-button-line-height);
+    letter-spacing: var(--preset-text-button-letter-spacing);
+    cursor: pointer;
+}
+
+.nav_session:hover{
+    background-color: var(--preset-color-green-2);
+}
+
+.nav_session:active{
+    background-color: var(--preset-color-green-3);
+}
+
+.nav_account{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    font-family: var(--preset-text-button-font-family);
+    font-size: var(--preset-text-button-font-size);
+    font-weight: var(--preset-text-button-font-weight);
+    line-height: var(---preset-text-button-line-height);
+    letter-spacing: var(--preset-text-button-letter-spacing);
+    background-color: var(--preset-color-grey-1);
+    cursor: pointer;
+}
+
+.nav_account:hover{
+    background-color: var(--preset-color-grey-2);
+}
+
+.nav_account:active{
+    background-color: var(--preset-color-grey-3);
+}
