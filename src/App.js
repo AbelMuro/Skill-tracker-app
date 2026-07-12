@@ -5,7 +5,7 @@ import Landing from './Pages/Landing';
 import './global.css';
 
 /* 
-    this is where i left off, i need to fix the typescript compiler issue with useMediaQuery.ts
+    this is where i left off, i need to continue designing the Header component
 */
 
 function App() {

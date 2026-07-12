@@ -1,6 +1,5 @@
 const path = require('path');              
-const HtmlWebpackPlugin = require("html-webpack-plugin");              
-
+const HtmlWebpackPlugin = require("html-webpack-plugin");                   
 
 module.exports = {
     entry: './src/index.js',                           
@@ -13,12 +12,13 @@ module.exports = {
         new HtmlWebpackPlugin({             
             filename: 'index.html',           
             template: './public/index.html'      
-        })     
+        })    
     ],
     devServer: {                             
         port: 3000,                           
         historyApiFallback: true,            
     },
+    
     module: {
         rules: [                               
             {                                 
@@ -26,7 +26,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',  
                     options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
+                        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
                         plugins: [
                           [
                             'babel-plugin-root-import',
@@ -34,7 +34,7 @@ module.exports = {
                               rootPathSuffix: './src',
                               rootPathPrefix: '~/'
                             },
-                              'src directory'                        
+                              'src directory'                     
                           ]                                        
                         ]
                           
@@ -58,10 +58,10 @@ module.exports = {
                   ]             
             },
             {
-                test: /\.(ts|tsx)$/,
-                use: 'ts-loader',
+                test: /\.tsx?$/,
+                loader: 'ts-loader',
                 exclude: /node_modules/,
-            }, 
+            },   
             {
                 test: /\.(png|jpg|webp|mp4|wav|svg)$/,
                 type: 'asset/resource'                                              
@@ -69,6 +69,9 @@ module.exports = {
         ]
     },
     resolve: {
-            extensions: ['.tsx', '.ts', '.js'],
-    }
+        extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            '~': path.resolve(__dirname, 'src')
+        }
+    },
 }

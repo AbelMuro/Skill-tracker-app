@@ -1,18 +1,18 @@
 import React from 'react';
 import * as styles from './styles.module.css';
-import icons from './icons';
+import icons from '~/Common/icons';
 import {useMediaQuery} from '~/Common/Hooks';
+import MobileNavigationBar from '~/Common/Components/MobileNavigationBar';
 
 function NavigationBar() {
     const [mobile] = useMediaQuery('(max-width: 600px)');
 
-    return (
+    return mobile ? <MobileNavigationBar/> : (
         <nav className={styles.nav}>
             <button className={styles.nav_logo}>
                 <img src={icons['logo']}/>
                 SkillTrack
             </button>
-
             <div className={styles.nav_buttons}>
                 <button className={styles.nav_session}>
                     + Log Session

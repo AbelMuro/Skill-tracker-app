@@ -8,6 +8,11 @@
     src: url('../public/Fonts/Manrope.ttf');
 }
 
+@font-face{
+    font-family: 'archivoBlack';
+    src: url('../public/Fonts/ArchivoBlack.ttf');
+}
+
 body{
     margin: 0px;
     background-color: var(--preset-color-white-2);
@@ -19,6 +24,15 @@ body{
 }
 
 :root{
+    --fifth-layer: 100;
+    --fourth-layer: 80;
+    --third-layer: 60;
+    --second-layer: 40;
+    --first-layer: 20;
+    --bottom-layer: -1;
+
+
+
     --preset-text-logo-font-family: 'robotoCondensed';
     --preset-text-logo-font-size: 1.5rem;
     --preset-text-logo-font-weight: 600;
@@ -31,16 +45,16 @@ body{
     --preset-text-button-line-height: 2rem;
     --preset-text-button-letter-spacing: 0px;   
 
-    --preset-text-1-font-family: 'manrope';
-    --preset-text-1-font-size: 2.5rem;
+    --preset-text-1-font-family: 'archivoBlack';
+    --preset-text-1-font-size: 4rem;
     --preset-text-1-font-weight: 800;
-    --preset-text-1-line-height: 2rem;
+    --preset-text-1-line-height: 5rem;
     --preset-text-1-letter-spacing: 0px;
 
     --preset-text-2-font-family: 'manrope';
     --preset-text-2-font-size: 2rem;
     --preset-text-2-font-weight: 600;
-    --preset-text-2-line-height: 2rem;
+    --preset-text-2-line-height: 3rem;
     --preset-text-2-letter-spacing: 0px;
 
     --preset-text-3-font-family: 'manrope';
@@ -49,6 +63,11 @@ body{
     --preset-text-3-line-height: 2rem;
     --preset-text-3-letter-spacing: 0px;
 
+    --preset-text-4-font-family: 'manrope';
+    --preset-text-4-font-size: 1rem;
+    --preset-text-4-font-weight: 600;
+    --preset-text-4-line-height: 2rem;
+    --preset-text-4-letter-spacing: 0px;
 
     --preset-color-white-1: rgb(255, 255, 255);
     --preset-color-white-2: rgb(249, 249, 249);  
@@ -61,5 +80,7 @@ body{
     --preset-color-green-1: #089104;
     --preset-color-green-2: #087804;
     --preset-color-green-3: #076004;
+
+    --preset-color-black-transparent: rgba(0, 0, 0, 0.5);
 
 }

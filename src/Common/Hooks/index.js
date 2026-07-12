@@ -1,3 +1,3 @@
-import useMediaQuery from './useMediaQuery.ts';
+import useMediaQuery from './useMediaQuery';
 
 export {useMediaQuery};
