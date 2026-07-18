@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: var(--first-layer);
+}
+
+
+.glow{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 10%;
+    right: 50px;
+    background: var(--preset-color-linear-gradient);
+    border-radius: 100%;
+    filter: blur(150px);
+}

@@ -2,19 +2,10 @@ import React, {useEffect} from 'react';
 import * as styles from './styles.module.css';
 import {motion, useMotionValue, useMotionTemplate, useMotionValueEvent} from 'framer-motion';
 
-type Props = {
-    width: string,
-    height: string,
-    strokeWidth: string,
-}
 
-function CircularProgress({width, height, strokeWidth} : Props) {
+function CircularProgress() {
     const percent = useMotionValue(0);
     const strokeDashoffset = useMotionTemplate`calc(339.29 - (339.29 * ${percent}) / 100)`;
-
-    useMotionValueEvent(percent, 'change', (newPercent) => {
-        console.log(newPercent);
-    })
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -25,7 +16,7 @@ function CircularProgress({width, height, strokeWidth} : Props) {
     }, [])
 
     return (
-        <svg width={width} height={height} viewBox="0 0 120 120">
+        <svg viewBox="0 0 120 120">
             <motion.circle
                 cx="60"
                 cy="60"

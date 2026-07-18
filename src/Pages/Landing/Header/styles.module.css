@@ -5,6 +5,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-size: 30px 30px;
+    border-left: 15px solid var(--preset-color-green-1);
+    border-bottom: 15px solid var(--preset-color-green-1);
 }
 
 .header_intro{
@@ -42,4 +45,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: var(--bottom-layer);
+}
+
+@media(max-width: 700px){
+    .header_title{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .header_desc{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 }

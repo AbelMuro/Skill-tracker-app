@@ -32,7 +32,6 @@ body{
     --bottom-layer: -1;
 
 
-
     --preset-text-logo-font-family: 'robotoCondensed';
     --preset-text-logo-font-size: 1.5rem;
     --preset-text-logo-font-weight: 600;
@@ -69,18 +68,21 @@ body{
     --preset-text-4-line-height: 2rem;
     --preset-text-4-letter-spacing: 0px;
 
-    --preset-color-white-1: rgb(255, 255, 255);
+    --preset-color-white-1: #ffffff;
     --preset-color-white-2: rgb(249, 249, 249);  
-    --preset-color-white-3: rgb(223, 223, 223);
+    --preset-color-white-3: #dfdfdf;
 
     --preset-color-grey-1: rgb(223, 223, 223);
     --preset-color-grey-2: rgb(200, 200, 200);
-    --preset-color-grey-3: rgb(177, 177, 177);
+    --preset-color-grey-3: #b1b1b1;
 
     --preset-color-green-1: #089104;
     --preset-color-green-2: #087804;
     --preset-color-green-3: #076004;
 
+    --preset-color-black-1: rgb(46, 46, 46);
+
     --preset-color-black-transparent: rgba(0, 0, 0, 0.5);
 
+    --preset-color-linear-gradient: linear-gradient(189deg, #089104 0%, #ffffff 100%);
 }

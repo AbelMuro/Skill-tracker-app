@@ -1,72 +1,38 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import * as styles from './styles.module.css';
-import {motion} from 'framer-motion';
+import {motion, useMotionValue} from 'framer-motion';
 
 function BackgroundAnimation() {
-    return (
-        <div className={styles.bars}>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 0.2}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 0.4}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 0.6}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 0.8}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 1.0}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 1.2}}
-                ></motion.div>
-            <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 1.4}}
-                ></motion.div>
-                        <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 1.6}}
-                ></motion.div>
-                        <motion.div 
-                className={styles.bar}
-                initial={{scaleY: '0'}}
-                animate={{scaleY: ['0', '1', '0', '0']}}
-                transition={{repeat: Infinity, duration: 2.3, delay: 1.8}}
-                ></motion.div>
 
-        </div>
+
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0.482 3.668 505.476 503.792" className={styles.container}>
+            <motion.path
+                d="
+                    M 44.36 382.342
+                    l 94.979 74.516
+                    l 62.537 -169.956
+
+                    M 298.674 367.978
+                    l -96.339 -80.98
+
+                    M 505.958 3.668
+                    l -207.165 364.435
+
+                    M 43.824 382.363
+                    l -43.342 125.097
+                "
+                fill="transparent"
+                stroke="#089104"
+                strokeWidth="8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeDasharray={'978.06px'}
+                initial={{strokeDashoffset: '978.06px'}}
+                animate={{strokeDashoffset: '0px', transition: {duration: 3}}}
+                />
+
+        </svg>
     )
 }
 
