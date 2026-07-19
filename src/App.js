@@ -5,8 +5,7 @@ import Landing from './Pages/Landing';
 import './global.css';
 
 /* 
-    this is where i left off, i need to continue to add more animation to the SectionOne 
-    component, 
+    this is where i left off, i need to continue designing the SectionTwo component
 */
 
 function App() {

@@ -1,5 +1,6 @@
 import React from 'react';
 import BackgroundAnimation from './BackgroundAnimation';
+import BarAnimation from './BarAnimation';
 import * as styles from './styles.module.css';
 import icons from './icons';
 
@@ -7,6 +8,7 @@ function SectionOne() {
     return(
         <section className={styles.container}>
             <BackgroundAnimation/>
+            <BarAnimation/>
             <article className={styles.content}>
                 <p className={styles.detail}>
                     <img src={icons['skill']}/>
