@@ -67,6 +67,9 @@
     letter-spacing: var(--preset-text-button-letter-spacing);
     background-color: var(--preset-color-grey-1);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav_account:hover{
@@ -75,4 +78,9 @@
 
 .nav_account:active{
     background-color: var(--preset-color-grey-3);
+}
+
+.nav_account > img{
+    width: 30px;
+    object-fit: contain;
 }
