@@ -65,8 +65,14 @@ body{
     --preset-text-4-font-family: 'manrope';
     --preset-text-4-font-size: 1rem;
     --preset-text-4-font-weight: 600;
-    --preset-text-4-line-height: 1.5rem;
+    --preset-text-4-line-height: 1.3rem;
     --preset-text-4-letter-spacing: 0px;
+
+    --preset-text-5-font-family: 'manrope';
+    --preset-text-5-font-size: 0.8rem;
+    --preset-text-5-font-weight: 400;
+    --preset-text-5-line-height: 1.2rem;
+    --preset-text-5-letter-spacing: 0px;
 
     --preset-color-white-1: #ffffff;
     --preset-color-white-2: #f9f9f9;  
@@ -79,6 +85,9 @@ body{
     --preset-color-green-1: #089104;
     --preset-color-green-2: #087804;
     --preset-color-green-3: #076004;
+    --preset-color-green-4: #034501;
+
+    --preset-color-red-1: rgb(195, 9, 9);
 
     --preset-color-black-1: #2e2e2e;
 

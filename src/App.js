@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavigationBar from './Common/Components/NavigationBar';
 import Landing from './Pages/Landing';
 import Login from './Pages/Authorization/Login';
+import Register from './Pages/Authorization/Register';
 import './global.css';
 
 /* 
@@ -16,6 +17,7 @@ function App() {
             <Routes>
                 <Route path='/' Component={Landing}/>
                 <Route path='/login' Component={Login}/>
+                <Route path='/register' Component={Register}/>
             </Routes>
         </BrowserRouter>
     )
