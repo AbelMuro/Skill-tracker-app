@@ -7,7 +7,7 @@ import Register from './Pages/Authorization/Register';
 import './global.css';
 
 /* 
-    this is where i left off, i need to continue designing the FOrm component of the login component
+    this is where i left off, i need to continue working on the Register component
 */
 
 function App() {
