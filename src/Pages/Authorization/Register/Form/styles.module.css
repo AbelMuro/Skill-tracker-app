@@ -1,0 +1,46 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.submit{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--preset-color-green-1);
+    color: var(--preset-color-white-1);
+    font-family: var(--preset-text-3-font-family);
+    font-size: var(--preset-text-3-font-size);
+    font-weight: var(--preset-text-3-font-weight);
+    line-height: var(--preset-text-3-line-height);
+    letter-spacing: var(--preset-text-3-letter-spacing);
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: var(--preset-color-green-2);
+}
+
+.submit:active{
+    background-color: var(--preset-color-green-3);
+}
+
+.error{
+    color: var(--preset-color-red-1);
+    margin: 0px;
+    font-family: var(--preset-text-5-font-family);
+    font-size: var(--preset-text-5-font-size);
+    font-weight: var(--preset-text-5-font-weight);
+    line-height: var(--preset-text-5-line-height);
+    letter-spacing: var(--preset-text-5-letter-spacing);
+}
+
+@media(max-width: 600px){
+    .submit{
+        font-size: 1.5rem;
+    }
+}

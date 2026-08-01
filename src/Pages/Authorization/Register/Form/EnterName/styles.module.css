@@ -17,16 +17,7 @@
     letter-spacing: var(--preset-text-4-letter-spacing);
 }
 
-.input_container{
-    width: 100%;
-    position: relative;
-    border: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-
-.password{
+.name{
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -40,7 +31,7 @@
     letter-spacing: var(--preset-text-4-letter-spacing);
 }
 
-.password:focus{
+.email:focus{
     outline: none;
     border: 2px solid var(--preset-color-green-1);
 }
@@ -53,23 +44,4 @@
     font-weight: var(--preset-text-5-font-weight);
     line-height: var(--preset-text-5-line-height);
     letter-spacing: var(--preset-text-5-letter-spacing);
-}
-
-.eye{
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    padding: 0px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 15px;
-    cursor: pointer;
-}
-
-.eye > img{
-    width: 30px;
-    object-fit: contain;
 }

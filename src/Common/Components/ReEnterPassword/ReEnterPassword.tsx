@@ -1,9 +1,14 @@
 import React, {useState, ChangeEvent, InvalidEvent, FocusEvent} from 'react';
-import {motion} from 'framer-motion';
 import icons from '~/Common/icons';
+import {motion} from 'framer-motion';
 import * as styles from './styles.module.css';
 
-function EnterPassword() {
+type Props = {
+    name: string,
+    label: string
+}
+
+function ReEnterPassword({name, label} : Props) {
     const [password, setPassword] = useState<string>('');
     const [error, setError] = useState<string>('');
     const [visible, setVisible] = useState<boolean>(false);
@@ -26,11 +31,18 @@ function EnterPassword() {
     const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
         const passwordElement = e.target as HTMLInputElement;
         const isEmpty = passwordElement.validity.valueMissing;
+        const patternMismatch = passwordElement.validity.patternMismatch;
 
         if(isEmpty){
             setError("Can't be empty.");
             passwordElement.setCustomValidity(' ');
         }   
+
+        else if(patternMismatch){
+            setError("Password doesn't meet the requirements");
+            passwordElement.setCustomValidity(' ');
+        }
+
     }
     
     const handleInvalid = (e: InvalidEvent<HTMLInputElement>) => {
@@ -40,30 +52,33 @@ function EnterPassword() {
 
         if(isEmpty)
             setError("Can't be empty.");
+        else 
+            setError("Password doesn't meet the requirements");
     }
 
     return (
         <motion.fieldset layout className={styles.fieldset}>
             <motion.label className={styles.label} layout>
-                Enter Password:
+                {label}
             </motion.label>
-            <motion.fieldset className={styles.input_container}>
-                <motion.input 
-                    layout
+            <motion.fieldset layout className={styles.input_container}>
+                <input 
                     type={visible ? 'text' : 'password'} 
-                    name='password'
+                    pattern={'[a-zA-Z0-9!@#$%^&*?].{6,}'}
+                    name={name}
                     className={styles.password} 
                     value={password} 
                     onChange={handleChange}
                     onBlur={handleBlur}
                     onInvalid={handleInvalid}
                     required
-                    />    
-                    {visible ? <button className={styles.eye} onClick={handleInvisible} type='button'>
-                        <img src={icons['closedEye']}/>
-                    </button> : <button className={styles.eye} onClick={handleVisible} type='button'>
-                        <img src={icons['openEye']}/>
-                    </button>}            
+                    />
+                {visible ? <button className={styles.eye} onClick={handleInvisible} type='button'>
+                    <img src={icons['closedEye']}/>
+                </button> : <button className={styles.eye} onClick={handleVisible} type='button'>
+                    <img src={icons['openEye']}/>
+                </button>}
+                
             </motion.fieldset>
 
             {
@@ -76,4 +91,4 @@ function EnterPassword() {
     )
 }
 
-export default EnterPassword;
+export default ReEnterPassword;

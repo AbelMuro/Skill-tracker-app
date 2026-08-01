@@ -37,7 +37,6 @@
     font-weight: var(--preset-text-4-font-weight);
     line-height: var(--preset-text-4-line-height);
     letter-spacing: var(--preset-text-4-letter-spacing);
-    text-align: center;
 }
 
 .login{
@@ -54,4 +53,10 @@
     color: var(--preset-color-green-1);
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media(max-width: 600px){
+    .register > p:nth-of-type(1){
+        text-align: center;
+    }
 }
