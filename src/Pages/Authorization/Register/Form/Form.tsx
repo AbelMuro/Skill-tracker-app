@@ -3,12 +3,14 @@ import EnterEmail from '~/Common/Components/EnterEmail';
 import ReEnterPassword from '~/Common/Components/ReEnterPassword';
 import EnterName from './EnterName';
 import {useNavigate} from 'react-router-dom';
+import {useTypedDispatch} from '~/Store';
 import {ClipLoader} from 'react-spinners';
 import * as styles from './styles.module.css';
 
 function Form() {
     const [error, setError] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
+    const dispatch = useTypedDispatch();
     const navigate = useNavigate();
 
     const handleSubmit = async (e : SubmitEvent) => {
@@ -41,8 +43,14 @@ function Form() {
 
             if(response.status === 401)
                 setError('Email already exists');
-            else
+            else{
                 navigate('/login');
+                dispatch({type: 'DISPLAY_MESSAGE', payload: {message: 'Account created succesfully'}});
+                setTimeout(() => {
+                    dispatch({type: 'HIDE_MESSAGE'});
+                }, 3000);
+            }
+                
         }
         catch(error: any){
             const message = error.message;

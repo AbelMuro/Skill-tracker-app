@@ -1,4 +1,4 @@
-import {createReducer, createAction} from '@reduxjs/toolkit';
+import {createReducer, createAction, PayloadAction} from '@reduxjs/toolkit';
 
 type InitialState = {
     display: boolean,
@@ -6,7 +6,7 @@ type InitialState = {
 }
 
 type Action = {
-    payload: any
+    message: string,
 }
 
 const initialState : InitialState = {
@@ -14,13 +14,19 @@ const initialState : InitialState = {
     message: ''
 }
 
-const displayMessage = createAction('DISPLAY_MESSAGE');
+const displayMessage = createAction<Action>('DISPLAY_MESSAGE');
+const hideMessage = createAction<void>('HIDE_MESSAGE');
 
 const toastReducer = createReducer(initialState, builder => {
-    builder.addCase(displayMessage, (state : InitialState, action : Action) => {
-        state.display = true;
-        state.message = action.payload.message;
-    })
+    builder
+        .addCase(displayMessage, (state: InitialState, action : PayloadAction<Action>) => {
+            state.display = true;
+            state.message = action.payload.message;
+        })
+        .addCase(hideMessage, (state) => {
+            state.display = false;
+            state.message = '';
+        })
 });
 
 export default toastReducer;
